@@ -21,7 +21,7 @@ Clone repo: git clone https://github.com/Nando-suka/UTS-PemrogramanWebEnterprise
 Buka index.html di browser.
 
 Kontribusi
-Repo ini untuk pengumpulan tugas. Hubungi dosen untuk feedback.
+Repo ini untuk pengumpulan tugas.
 Terima kasih!
 Disusun oleh Fernando --- [41523010038]
 
@@ -50,6 +50,6 @@ Clone the repo: git clone https://github.com/Nando-suka/UTS-PemrogramanWebEnterp
 Open index.html in a browser.
 
 Contributions
-This repo is for assignment submission. Contact the instructor for feedback.
+This repo is for assignment submission.
 Thank you!
 Prepared by Fernando --- [41523010038]
