@@ -79,11 +79,7 @@
       text-decoration: none;
       display: block;
       padding: 5px 0;
-    }
-
-    .nav-link:hover {
-      text-decoration: underline;
-      color: #d1d1d1 !important;
+      border-bottom: 2px solid transparent;
     }
 
     /* 🔍 Kotak Pencarian */
@@ -311,6 +307,17 @@
       display: flex;
       align-items: flex-end;
       padding: 20px;
+    }
+
+    /* Garis putih di sisi kiri untuk layanan cards */
+    .layanan-inner-border {
+      position: absolute;
+      top: 15%;
+      left: 20px;
+      width: 3px;
+      height: 70%;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 3px;
     }
 
     .layanan-label {
@@ -744,7 +751,7 @@
 
     <!-- Menu Navigasi -->
     <ul class="nav" id="navMenu">
-      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="bagianKedua/index.html">Tentang Kami</a></li>
       <li class="nav-item"><a class="nav-link" href="bagianKetiga/index.html">Layanan Kami</a></li>
       <li class="nav-item"><a class="nav-link" href="bagianKeempat/index.html">Artikel</a></li>
@@ -801,6 +808,7 @@
           <div class="layanan-card mx-auto">
             <img src="assets/bachelor.png" alt="Studi S1 Bachelor">
             <div class="layanan-overlay">
+              <div class="layanan-inner-border"></div>
               <span class="layanan-label">Studi S1 - Bachelor</span>
             </div>
           </div>
@@ -811,6 +819,7 @@
           <div class="layanan-card mx-auto">
             <img src="assets/master.png" alt="Studi S2 Master">
             <div class="layanan-overlay">
+              <div class="layanan-inner-border"></div>
               <span class="layanan-label">Studi S2 - Master</span>
             </div>
           </div>
@@ -821,6 +830,7 @@
           <div class="layanan-card mx-auto">
             <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=360&h=270&fit=crop" alt="Studi S3 Ph.D">
             <div class="layanan-overlay">
+              <div class="layanan-inner-border"></div>
               <span class="layanan-label">Studi S3 - Ph.D</span>
             </div>
           </div>
@@ -831,6 +841,7 @@
           <div class="layanan-card mx-auto">
             <img src="assets/kursus.png" alt="Kursus Bahasa Asing">
             <div class="layanan-overlay">
+              <div class="layanan-inner-border"></div>
               <span class="layanan-label">Kursus Bahasa Asing</span>
             </div>
           </div>
@@ -841,6 +852,7 @@
           <div class="layanan-card mx-auto">
             <img src="assets/studytour.png" alt="Study Tour">
             <div class="layanan-overlay">
+              <div class="layanan-inner-border"></div>
               <span class="layanan-label">Study Tour</span>
             </div>
           </div>
@@ -851,6 +863,7 @@
           <div class="layanan-card mx-auto">
             <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=360&h=270&fit=crop" alt="Ausbildung">
             <div class="layanan-overlay">
+              <div class="layanan-inner-border"></div>
               <span class="layanan-label">Ausbildung</span>
             </div>
           </div>
@@ -983,23 +996,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
-    // Menandai link navigasi aktif berdasarkan URL (tanpa storage)
-    (function () {
-      const LINKS_SELECTOR = '.nav-link';
-      const norm = s => (s || '').replace(/^[.\/]+/, '');
-
-      function setActiveByLocation() {
-        const path = window.location.pathname.split('/').pop() || 'index.html';
-        document.querySelectorAll(LINKS_SELECTOR).forEach(l => {
-          const lh = norm(l.getAttribute('href') || '');
-          const lLast = lh.split('/').pop();
-          const isMatch = (lh === path) || (lLast === path) || (path.endsWith(lLast));
-          l.classList.toggle('active', isMatch);
-        });
-      }
-
-      document.addEventListener('DOMContentLoaded', setActiveByLocation);
-    })();
 
     // Hamburger Menu Toggle
     const hamburger = document.getElementById('hamburger');
@@ -1050,5 +1046,4 @@
   </footer>
 
 </body>
-
 </html>
